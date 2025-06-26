@@ -5,8 +5,13 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: false
           lower-case-service-id: true
+      routes:
+        - id: msclientes
+          uri: lb://msclientes
+          predicates:
+            - Path=/clientes/**
 
 server:
   port: 8080
