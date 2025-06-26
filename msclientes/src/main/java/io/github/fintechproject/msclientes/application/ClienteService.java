@@ -13,11 +13,7 @@ public class ClienteService {
 
     private final ClienteRepository repository;
 
-    public ClienteService(ClienteRepository repository) {
-        this.repository = repository;
-    }
-
-    public Cliente save (Cliente cliente){
+    public Cliente save(Cliente cliente) {
         return repository.save(cliente);
     }
 
