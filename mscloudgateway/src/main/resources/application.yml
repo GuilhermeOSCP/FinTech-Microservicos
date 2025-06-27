@@ -12,6 +12,10 @@ spring:
           uri: lb://msclientes
           predicates:
             - Path=/clientes/**
+        - id: mscartoes
+          uri: lb://mscartoes
+          predicates:
+            - Path=/cartoes/**
 
 server:
   port: 8080
