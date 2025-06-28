@@ -16,6 +16,10 @@ spring:
           uri: lb://mscartoes
           predicates:
             - Path=/cartoes/**
+        - id: msavaliadorcredito
+          uri: lb://msavaliadorcredito
+          predicates:
+            - Path=/avaliacoes-credito/**
 
 server:
   port: 8080
