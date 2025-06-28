@@ -1,6 +1,7 @@
 package io.github.fintechproject.msclientes.application;
 
 import com.sun.istack.logging.Logger;
+import io.github.fintechproject.msclientes.application.domain.model.DadosCliente;
 import io.github.fintechproject.msclientes.application.representation.ClienteSaveRequest;
 import io.github.fintechproject.msclientes.domain.Cliente;
 import lombok.RequiredArgsConstructor;
@@ -39,11 +40,18 @@ public class ClientesResource {
     }
 
     @GetMapping(params = "cpf")
-    public ResponseEntity<?> dadosCliente(@RequestParam("cpf") String cpf) {
-        Optional<Cliente> cliente = service.getByCPF(cpf);
-        if (cliente.isEmpty()) {
+    public ResponseEntity<DadosCliente> dadosCliente(@RequestParam("cpf") String cpf) {
+        Optional<Cliente> clienteOptional = service.getByCPF(cpf);
+        if (clienteOptional.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(cliente);
+
+        Cliente cliente = clienteOptional.get();
+        DadosCliente dados = new DadosCliente();
+        dados.setId(cliente.getId());
+        dados.setNome(cliente.getNome());
+
+        return ResponseEntity.ok(dados);
     }
+
 }
