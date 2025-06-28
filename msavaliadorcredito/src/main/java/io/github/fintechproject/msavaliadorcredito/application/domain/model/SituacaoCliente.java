@@ -13,5 +13,5 @@ import java.util.List;
 @Builder
 public class SituacaoCliente {
     private DadosCliente cliente;
-    private List<CartaoClientes> cartoes;
+    private List<CartaoCliente> cartoes;
 }
