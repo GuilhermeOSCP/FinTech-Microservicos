@@ -50,6 +50,7 @@ public class ClientesResource {
         DadosCliente dados = new DadosCliente();
         dados.setId(cliente.getId());
         dados.setNome(cliente.getNome());
+        dados.setIdade(cliente.getIdade());
 
         return ResponseEntity.ok(dados);
     }
