@@ -20,6 +20,11 @@ spring:
           uri: lb://msavaliadorcredito
           predicates:
             - Path=/avaliacoes-credito/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/fintech-microservicos-realm
 
 server:
   port: 8080
