@@ -1,6 +1,12 @@
 spring:
   application:
     name: eurekaserver
+  security:
+    basic:
+      enabled: true
+    user:
+      name: fintech-eureka-user
+      password: Magnamon@2025
 
 server:
   port: 8761
