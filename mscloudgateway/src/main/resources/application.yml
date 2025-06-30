@@ -34,4 +34,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://fintech-eureka-user:Magnamon2025@localhost:8761/eureka

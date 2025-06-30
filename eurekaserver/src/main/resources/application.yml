@@ -6,7 +6,7 @@ spring:
       enabled: true
     user:
       name: fintech-eureka-user
-      password: Magnamon@2025
+      password: Magnamon2025
 
 server:
   port: 8761
