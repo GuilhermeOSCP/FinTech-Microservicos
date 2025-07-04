@@ -46,3 +46,16 @@
 2025-07-04 08:04:35.422  INFO 6128 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
 2025-07-04 08:04:35.438  INFO 6128 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MSAVALIADORCREDITO/msavaliadorcredito:cc5d3dfeacbd5c45ed40e47dd77bc9cd - deregister  status: 200
 2025-07-04 08:04:35.443  INFO 6128 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-07-04 08:33:51.895  INFO 17188 --- [main] g.f.m.MsavaliadorcreditoApplicationTests : Starting MsavaliadorcreditoApplicationTests using Java 21.0.3 on DESKTOP-4MTB0FR with PID 17188 (started by Snove in C:\Users\Snove\IdeaProjects\FinTech Microservicos\projeto-fintechmicroservicos\msavaliadorcredito)
+2025-07-04 08:33:51.897  INFO 17188 --- [main] g.f.m.MsavaliadorcreditoApplicationTests : The following 1 profile is active: "local"
+2025-07-04 08:33:53.962  INFO 17188 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=671a7cb7-d2a0-3c36-ab79-2598c96706f0
+2025-07-04 08:33:55.594  INFO 17188 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'msclientes' URL not provided. Will try picking an instance via load-balancing.
+2025-07-04 08:33:55.758  INFO 17188 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'mscartoes' URL not provided. Will try picking an instance via load-balancing.
+2025-07-04 08:34:01.163  INFO 17188 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-07-04 08:34:02.853  INFO 17188 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-07-04 08:34:02.875  INFO 17188 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-07-04 08:34:02.980  WARN 17188 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-04 08:34:03.000  INFO 17188 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2025-07-04 08:34:03.079  INFO 17188 --- [main] g.f.m.MsavaliadorcreditoApplicationTests : Started MsavaliadorcreditoApplicationTests in 12.824 seconds (JVM running for 14.14)
+2025-07-04 08:34:03.570  INFO 17188 --- [SpringApplicationShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-07-04 08:34:03.572  INFO 17188 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MSAVALIADORCREDITO with eureka with status DOWN

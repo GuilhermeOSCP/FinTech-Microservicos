@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: mscloudgateway
+  profiles:
+    active: local
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+        - id: msclientes
+          uri: lb://msclientes
+          predicates:
+            - Path=/clientes/**
+        - id: mscartoes
+          uri: lb://mscartoes
+          predicates:
+            - Path=/cartoes/**
+        - id: msavaliadorcredito
+          uri: lb://msavaliadorcredito
+          predicates:
+            - Path=/avaliacoes-credito/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://${KEYCLOAK_SERVER}:${KEYCLOAK_PORT}/realms/fintech-microservicos-realm
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://fintech-eureka-user:Magnamon2025@${EUREKA_SERVER}:8761/eureka
