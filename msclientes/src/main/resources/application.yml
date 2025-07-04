@@ -1,6 +1,8 @@
 spring:
   application:
     name: msclientes
+  profiles:
+    active: local
 
 server:
   port: 0
